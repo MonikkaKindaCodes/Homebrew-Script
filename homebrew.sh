@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Starting bootstrapping"
+echo "Starting Installation"
 
 # Check for Homebrew, install if we don't have it
 if test ! $(which brew); then
