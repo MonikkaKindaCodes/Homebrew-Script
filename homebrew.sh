@@ -103,4 +103,4 @@ brew cask install ${CASKS[@]}
 
 echo "Homebrew & Microsoft Office..."
 
-echo "Bootstrapping complete"
+echo "Installation complete"
