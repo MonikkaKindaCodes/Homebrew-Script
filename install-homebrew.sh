@@ -94,6 +94,10 @@ if test ! "$(sudo -u $ConsoleUser which brew)"; then
   # Disable Homebrew analytics
   sudo -H -iu ${ConsoleUser} /usr/local/bin/brew analytics off  </dev/null
 
+  #Install Office
+  #sudo -u $ConsoleUser brew tap homebrew/cask
+  sudo -u $ConsoleUser brew install --cask microsoft-office
+
 # If Homebrew is already installed then just echo that it is already installed
 else
   echo "Homebrew is already installed"
