@@ -1,29 +1,25 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-echo "Starting Installation"
+# Homebrew Script for OSX
+# To execute: save and `chmod +x ./brew-install-script.sh` then `./brew-install-script.sh`
 
-# Check for Homebrew, install if we don't have it
-if test ! $(which brew); then
-    echo "Installing homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+echo "Installing brew..."
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Update homebrew recipes
-brew update
+echo "Installing brew cask..."
+brew tap homebrew/cask
 
-echo "Cleaning up..."
-brew cleanup
+# Communication Apps
+echo "Installing communication apps..."
+brew install --cask microsoft-teams
+brew install --cask microsoft-outlook
 
-echo "Installing cask..."
-brew install caskroom/cask/brew-cask
+# File Storage
+echo "Installing file storage tools..."
+brew install --cask onedrive
 
-CASKS=(
-    microsoft-office
-)
+# Writing Apps
+echo "Installing writing apps..."
+brew install --cask microsoft-word
 
-echo "Installing cask apps..."
-brew cask install ${CASKS[@]}
-
-echo "Homebrew & Microsoft Office..."
-
-echo "Installation complete"
+echo "Installation Complete"
