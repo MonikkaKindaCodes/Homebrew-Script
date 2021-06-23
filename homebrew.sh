@@ -11,7 +11,6 @@ brew tap homebrew/cask
 
 # Communication Apps
 echo "Installing communication apps..."
-brew install --cask microsoft-teams
 brew install --cask microsoft-outlook
 
 # File Storage
@@ -21,5 +20,7 @@ brew install --cask onedrive
 # Writing Apps
 echo "Installing writing apps..."
 brew install --cask microsoft-word
+brew install --cask microsoft-powerpoint
+brew install --cask microsoft-excel
 
 echo "Installation Complete"
